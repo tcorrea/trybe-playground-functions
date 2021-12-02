@@ -56,9 +56,25 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Desafio 8 FIXME:
+function fizzBuzz(numbers) {
+  let result = [];
+
+  for (let number of numbers) {
+    if (number % 3 === 0 && number % 5 !== 0) {
+      result.push('fizz');
+    }
+    if (number % 5 === 0 && number % 3 !== 0) {
+      result.push('buzz');
+    }
+    if (number % 3 === 0 && number % 5 === 0) {
+      result.push('fizzBuzz');
+    }
+    if (number % 3 !== 0 && number % 5 !== 0) {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
