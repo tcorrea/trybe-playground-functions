@@ -28,7 +28,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-
   // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
   let count = 0;
   let biggest = numbers.reduce(function (previousValue, currentValue) {
@@ -43,11 +42,18 @@ function highestCount(numbers) {
   return count;
 }
 
-console.log(highestCount([-2, -2, -1]));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+
+  if (distCat1 > distCat2) {
+    return 'cat2';
+  }
+  if (distCat1 < distCat2) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
