@@ -77,12 +77,32 @@ function fizzBuzz(numbers) {
   return result;
 }
 
+let data = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let encodedSentence = '';
+  for (let word of sentence) {
+    if (word in data) {
+      encodedSentence += data[word];
+    } else {
+      encodedSentence += word;
+    }
+  }
+  return encodedSentence;
 }
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  let decodedSentence = '';
+
+  for (let word of sentence) {
+    if (Object.values(data).includes(parseInt(word))) {
+      decodedSentence += Object.keys(data).find((key) => data[key] === parseInt(word));
+    } else {
+      decodedSentence += word;
+    }
+  }
+
+  return decodedSentence;
 }
 
 module.exports = {
